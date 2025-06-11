@@ -1,0 +1,161 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #e0f7fa, #fff);
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar */
+nav {
+    background-color: #0d6efd;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    margin-left: 20px;
+    transition: opacity 0.3s ease;
+}
+
+nav a:hover {
+    opacity: 0.85;
+}
+
+/* Dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    font-size: 16px;
+    padding: 10px 16px;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    min-width: 160px;
+    z-index: 1;
+    border-radius: 6px;
+    overflow: hidden;
+    top: 40px;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.2s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Project Container */
+.project {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 1rem;
+}
+
+/* Key Info Box */
+#insert {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+.key {
+    font-size: 24px;
+    font-weight: 600;
+    color: #0d6efd;
+    margin-bottom: 20px;
+}
+
+/* Table Styles */
+.color table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.color th, .color td {
+    border: 1px solid #ddd;
+    padding: 16px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.color th {
+    background-color: #0d6efd;
+    color: white;
+}
+
+.color tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.color tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .key {
+        font-size: 20px;
+    }
+
+    .color th, .color td {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .dropbtn {
+        width: 100%;
+    }
+}
+

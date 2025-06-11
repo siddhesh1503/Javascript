@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Part 2</title>
+</head>
+<body style = background-color:#a2d6e8; font-family: Arial, sans-serif;>
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+        <div class="day">Friday</div>
+        <div class="day">Saturday</div>
+        <div class="day">Sunday</div>
+    </div>
+    
+    <script>
+        // Select the parent element
+        const parent = document.querySelector('.parent');
+
+        // Create a new div element
+        const newDiv = document.createElement('div');
+        newDiv.className = 'day';
+        newDiv.textContent = 'New Day';
+
+        // Append the new div to the parent
+        parent.appendChild(newDiv);
+
+        // Select all day elements
+        const days = document.querySelectorAll('.day');
+
+        // Change the background color of each day element
+        days.forEach(day => {
+            day.style.backgroundColor = '#f0f8ff';
+            day.style.padding = '10px';
+            day.style.margin = '5px';
+            day.style.borderRadius = '5px';
+        });
+
+    </script>
+</body>
+</html>

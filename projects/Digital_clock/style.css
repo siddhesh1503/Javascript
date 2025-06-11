@@ -1,0 +1,92 @@
+/* Import Google Font Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap');
+
+:root {
+    --color-background: #ebf9fd;
+    --color-text-primary: #111827; /* almost black for headlines */
+    --color-text-secondary: #6b7280; /* neutral gray */
+    --color-shadow: rgba(0, 0, 0, 0.1);
+    --font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    --border-radius: 0.75rem;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--color-background);
+    color: var(--color-text-secondary);
+    font-family: var(--font-family);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+.center {
+    max-width: 1200px;
+    width: 100%;
+    text-align: center;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#banner {
+    font-weight: 700;
+    font-size: 48px;
+    color: var(--color-text-primary);
+    padding: 1.5rem 3rem;
+    background-color: #f9fafb; /* Very light gray background */
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 12px var(--color-shadow);
+    user-select: none;
+    transition: color 0.3s ease, box-shadow 0.3s ease;
+    display: inline-block;
+}
+
+#banner span {
+    display: inline-block;
+}
+
+#banner:hover {
+    color: #336ce7; /* bright blue accent on hover */
+    box-shadow: 0 6px 24px rgba(37, 99, 235, 0.3);
+    cursor: default;
+}
+
+#clock {
+    font-weight: 600;
+    font-size: 32px;
+    color: var(--color-text-primary);
+    padding: 1rem 2rem;
+    background-color: #f9fafb;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 12px var(--color-shadow);
+    user-select: none;
+    min-width: 220px;
+    margin: 0 auto;
+}
+
+/* Responsive font sizing for smaller screens */
+@media (max-width: 600px) {
+    #banner {
+        font-size: 36px;
+        padding: 1rem 2rem;
+    }
+    #clock {
+        font-size: 24px;
+        padding: 0.75rem 1.5rem;
+        min-width: 180px;
+    }
+}
+

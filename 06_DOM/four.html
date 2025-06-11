@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Part 4</title>
+</head>
+<body style = "background-color: rgb(170, 236, 236); color: rgb(1, 6, 10);">
+    <ul class = "languages">
+        <li>JavaScript</li>
+        <li>Python</li>
+        <li>Java</li>
+        <li>C++</li>
+        <li>Ruby</li>
+
+    </ul>
+</body>
+<script>
+    function addLanguage(langName) {
+        // Create a new list item element
+        const li = document.createElement('li');
+        li.innerHTML = `<span>${langName}</span>`;
+        document.querySelector('.languages').appendChild(li);
+        // Set the text content of the new item
+        li.textContent = langName;
+
+        // Append the new item to the list
+        document.querySelector('.languages').appendChild(li);
+    }
+    addLanguage('TypeScript');
+    addLanguage('Swift');
+
+    function addOptiLanguage(langName) {
+        // Create a new list item element
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langName));
+        document.querySelector('.languages').appendChild(li);
+    }      
+    addOptiLanguage('Go');  
+    // Edit
+    const secondLang = document.querySelector("li:nth-child(2)");
+    const newLi = document.createElement('li');
+    newLi.textContent = 'Kotlin';
+    secondLang.replaceWith(newLi);
+
+    // Edit
+    const firstLang = document.querySelector("li:first-child");
+    firstLang.outerHTML = '<li>ENG</li>'
+
+    // Remove
+    const lastLang = document.querySelector('li:last-child')
+    langName.remove()
+
+</script>
+</html>
